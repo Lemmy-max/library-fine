@@ -1,0 +1,47 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+int book_ID;
+int Due_date;
+int Return_date;
+
+printf("Enter book_ID:");
+scanf("%d",&book_ID);
+
+printf("\nEnter Due_date:");
+scanf("%d",&Due_date);
+
+printf("\nEnter Return_date:");
+scanf("%d",&Return_date);
+
+int Due_days;
+
+Due_days=Return_date-Due_date;
+printf("Due_days=%d",Due_days);
+
+float charges;
+if(Due_days<=7){
+    charges=(Due_days*20);
+    printf("\namount charged:%f",charges);
+    
+}
+    
+
+else if(Due_days<=14){
+    charges=((7*20)+(Due_days-7)*50);
+    printf("\namount charged:%f",charges);
+    
+}
+    
+
+else{
+    charges=((7*20)+(7*50)+(Due_days-14)*100);
+    printf("\namount charged:%f",charges);
+}
+
+    
+    
+
+    return 0;
+}
